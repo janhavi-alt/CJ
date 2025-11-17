@@ -1,0 +1,81 @@
+2. Write a program
+a. in Java to find the biggest element among three numbers using if
+else.
+
+package pract2a;
+
+public class Pract2a {
+    public static void main(String[] args) {
+
+        int a = 10, b = 20, c = 15;
+        int biggest;
+
+        if (a >= b && a >= c) {
+            biggest = a;
+        } else if (b >= a && b >= c) {
+            biggest = b;
+        } else {
+            biggest = c;
+        }
+
+        System.out.println("Biggest number = " + biggest);
+    }
+}
+
+pract 2b. Write a program in Java to find the biggest element among three
+numbers using the ternary operator.
+
+package pract2b;
+
+public class Pract2b {
+    public static void main(String[] args) {
+
+        int a = 10, b = 20, c = 15;
+
+        int biggest = (a > b) ?
+                        (a > c ? a : c) :
+                        (b > c ? b : c);
+
+        System.out.println("Biggest number = " + biggest);
+    }
+}
+
+
+pract 2c. Write a program in Java to check the grade of marks using a switch
+case
+
+package pract2c;
+
+import java.util.Scanner;
+
+public class Pract2c {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter marks: ");
+        int marks = sc.nextInt();
+
+        switch (marks / 10) {
+
+            case 10:  // 100
+            case 9:   // 90–99
+                System.out.println("Grade: A");
+                break;
+
+            case 8:   // 80–89
+                System.out.println("Grade: B");
+                break;
+
+            case 7:   // 70–79
+                System.out.println("Grade: C");
+                break;
+
+            case 6:   // 60–69
+                System.out.println("Grade: D");
+                break;
+
+            default:  // below 60
+                System.out.println("Grade: F");
+        }
+    }
+}
