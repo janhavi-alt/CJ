@@ -1,0 +1,91 @@
+pract 1 a -- Write a program
+a. in Java to demonstrate Boolean value.
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pract1a;
+
+/**
+ *
+ * @author F.G.NAIK
+ */
+public class Pract1a {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        boolean isJavaFun = true;
+        boolean isDifficult = false;
+
+        System.out.println("Is Java fun? " + isJavaFun);
+        System.out.println("Is Java difficult? " + isDifficult);
+    }
+    
+}
+
+pract1b-- b. Print a string 10 times using a for loop.
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pract1a;
+
+/**
+ *
+ * @author F.G.NAIK
+ */
+public class Pract1a {
+
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Hello, Java!");
+        }
+    }
+    
+}
+
+pract1c-- c. Write a program in Java to evaluate a+b*c%d.
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pract1a;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author F.G.NAIK
+ */
+public class Pract1a {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+
+        System.out.print("Enter c: ");
+        int c = sc.nextInt();
+
+        System.out.print("Enter d: ");
+        int d = sc.nextInt();
+
+        int result = a + (b * c % d);
+
+        System.out.println("Result of a + b * c % d = " + result);
+    }
+    
+}
