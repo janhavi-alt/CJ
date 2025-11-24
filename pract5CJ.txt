@@ -1,0 +1,84 @@
+5.Write a program
+a. in Java to find the volume of a box using this keyword.
+
+package pract5a;
+
+public class Pract5a {
+    int length, breadth, height;
+
+    Pract5a(int length, int breadth, int height) {
+        this.length = length;     // using this keyword
+        this.breadth = breadth;
+        this.height = height;
+    }
+
+    int volume() {
+        return length * breadth * height;
+    }
+
+    public static void main(String[] args) {
+        Pract5a box = new Pract5a(5, 4, 3);
+        System.out.println("Volume of Box = " + box.volume());
+    }
+}
+
+
+
+b. Write a program in Java to find the average of three numbers
+using the method overloading
+
+package pract5b;
+
+public class Pract5b {
+
+    // Overloaded method for int values
+    double average(int a, int b, int c) {
+        return (a + b + c) / 3.0;
+    }
+
+    // Overloaded method for double values
+    double average(double a, double b, double c) {
+        return (a + b + c) / 3.0;
+    }
+
+    public static void main(String[] args) {
+        Pract5b obj = new Pract5b();
+
+        System.out.println("Average (int): " + obj.average(10, 20, 30));
+        System.out.println("Average (double): " + obj.average(10.5, 20.5, 30.5));
+    }
+}
+
+
+c. Write a program in Java to find average of three numbers
+using method overriding.
+
+package pract5c;
+class Base {
+    double average(int a, int b, int c) {
+        return (a + b + c) / 3.0;
+    }
+}
+
+class Derived extends Base {
+    @Override
+    double average(int a, int b, int c) {
+        System.out.println("Overridden Method Called");
+        return (a + b + c) / 3.0;
+    }
+}
+
+public class Pract5c {
+    public static void main(String[] args) {
+        Base obj = new Derived();   // runtime polymorphism
+        double avg = obj.average(10, 20, 30);
+        System.out.println("Average = " + avg);
+    }
+}
+
+
+
+
+
+
+

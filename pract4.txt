@@ -1,0 +1,94 @@
+4. Write a program
+a. in Java to multiply two matrices.
+
+package pract4a;
+
+public class Pract4a {
+    public static void main(String[] args) {
+        int a[][] = { {1, 2, 3}, {4, 5, 6} };          // 2×3 matrix
+        int b[][] = { {7, 8}, {9, 10}, {11, 12} };     // 3×2 matrix
+
+        int rowsA = a.length;
+        int colsA = a[0].length;
+        int colsB = b[0].length;
+
+        int result[][] = new int[rowsA][colsB];
+
+        for (int i = 0; i < rowsA; i++) {
+            for (int j = 0; j < colsB; j++) {
+                for (int k = 0; k < colsA; k++) {
+                    result[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+
+        System.out.println("Result Matrix:");
+        for (int i = 0; i < rowsA; i++) {
+            for (int j = 0; j < colsB; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+b. Write a program in Java to calculate the area of a rectangle
+using single inheritance.
+
+package pract4b;
+
+class Rectangle {
+    int length, width;
+
+    void getData(int l, int w) {
+        length = l;
+        width = w;
+    }
+}
+
+class Area extends Rectangle {
+    int calculate() {
+        return length * width;
+    }
+}
+
+public class Pract4b {
+    public static void main(String[] args) {
+        Area obj = new Area();
+        obj.getData(10, 20);
+        System.out.println("Area of Rectangle = " + obj.calculate());
+    }
+}
+
+c. Write a program in Java to demonstrate multilevel inheritance.
+
+package pract4c;
+
+class A {
+    void displayA() {
+        System.out.println("This is class A");
+    }
+}
+
+class B extends A {
+    void displayB() {
+        System.out.println("This is class B");
+    }
+}
+
+class C extends B {
+    void displayC() {
+        System.out.println("This is class C");
+    }
+}
+
+public class Pract4c {
+    public static void main(String[] args) {
+        C obj = new C();
+        obj.displayA();
+        obj.displayB();
+        obj.displayC();
+    }
+}
